@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+    <div class="container" align="center">
+    <div id="title">
+        <h1>
+            DoctorBot
+        </h1>
+        <h3>
+            An interactive diagnosis bot.
+        </h3>
+    </div>
+    <fieldset>
+        <textarea id="chatWindow" tabindex="0" readonly></textarea>
+    </fieldset>
+    <input id="messageBar" placeholder="Ask me anything" type="text" tabindex="1" required autofocus>
+    <button id="submit" type="submit">Submit</button>
+    <button id="reset" type="submit">Reset</button>
+
+    </form>
+</div>
+  </body>
+  <script src="jquery.min.js" type="text/javascript"></script>
+  <script src="chatHandler.js" type="text/javascript"></script>
+  <script src="doctorBot.js" type="text/javascript"></script>
+  <script src="doctorBotData.js" type="text/javascript"></script>
+</html>
