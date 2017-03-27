@@ -41,7 +41,7 @@ DoctorBot.prototype.getBotResponse = function (input) {
                     this.symptomCheckCount++;
                 }
             }, this);
-            if (this.symptomCheckCount < 2) return 'Seeing any other foundSymptoms? If yes, mention now. Else, say no.';
+            if (this.symptomCheckCount < 2) return 'Seeing any other symptoms? If yes, mention now. Else, say no.';
         }
         this.symptomCheckedFlag = true;
     }
