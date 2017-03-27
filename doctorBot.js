@@ -100,7 +100,6 @@ DoctorBot.prototype.getBotResponse = function (input) {
             this.commonsProcessed = true;
         }
         this.checkRelatedInfo=true;
-        console.log(this.queries);
     }
 
     if(!this.processedAllQueriesFlag && this.checkRelatedInfo){
@@ -122,12 +121,10 @@ DoctorBot.prototype.getBotResponse = function (input) {
             specType = specId.replace(/[0-9]/g, '');
             if(specType==='C') {
                 queryValueRegex = new RegExp(`(${objectToNameArray(commons.find(x => x.id === specId).allowedValues).join('|')})`, 'gi');
-                console.log(queryValueRegex);
             }
             if(specType==='S'){
                 queryValueRegex = new RegExp(`(${objectToNameArray(botKeywords.symptoms.find(x => x.id === symId)
                     .specifics.find(x => x.id === specId).allowedValues).join('|')})`, 'gi');
-                console.log(queryValueRegex);
             }
 
             findings = input.toLowerCase().match(queryValueRegex);
@@ -193,6 +190,5 @@ var pickRandom = function (array) {
 }
 
 DoctorBot.prototype.getReport = function () {
-    console.log(this.diagReport);
     return 'Based on the symptoms, I think it is \n\t\t['+this.diagReport.join(', ')+']\n\t\t Please click reset to start next session';
 }
