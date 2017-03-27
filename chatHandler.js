@@ -41,7 +41,7 @@ $(function (){
         doctorBot = new DoctorBot();
         chatStream = new Array();
         userInput = '';
-        botOutput = 'Doctor:  Hello! I\'m glad to meet you. Please start describing your foundSymptoms.';
+        botOutput = 'Doctor:  Hello! I\'m glad to meet you. Please start describing your symptoms.';
         chatStream.push(botOutput);
         $('#chatWindow').val(chatStream.join('\n'));
         $('#messageBar').val("");

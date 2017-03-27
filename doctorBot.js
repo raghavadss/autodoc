@@ -27,11 +27,11 @@ DoctorBot.prototype.getBotResponse = function (input) {
         findings = input.toLowerCase().match(this.quitStatementRegex);
         if (findings) {
             this.quitSymptomCheckFlag = true;
-            if (!this.foundSymptoms.length) return 'Well, you haven\'t talked about any foundSymptoms I would understand.';
+            if (!this.foundSymptoms.length) return 'Well, you haven\'t talked about any symptoms I would understand.';
         }
 
         if (!this.quitSymptomCheckFlag) {
-            //find all foundSymptoms in the input
+            //find all symptoms in the input
             findings = input.toLowerCase().match(this.keywordRegex);
             if (!findings) return pickRandom(genericResponses.symptomSpecific);
             findings.forEach(function (sym) {
